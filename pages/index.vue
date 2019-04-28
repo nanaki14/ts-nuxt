@@ -1,37 +1,41 @@
 <template>
   <section class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        ts-nuxt
-      </h1>
-      <h2 class="subtitle">
-        My hunky-dory Nuxt.js project
-      </h2>
+      <logo/>
+      <h1 class="title">ts-nuxt</h1>
+      <h2 class="subtitle">My hunky-dory Nuxt.js project</h2>
+      <span @click="handleIncrement">{{count}}</span>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
-
-export default {
+export default Vue.extend({
   components: {
     Logo
+  },
+  data() {
+    return {
+      num: 0
+    }
+  },
+  computed: {
+    count(): number {
+      return this.num
+    }
+  },
+  methods: {
+    handleIncrement: function() {
+      this.num += 1
+    }
   }
-}
+})
 </script>
 
 <style>
