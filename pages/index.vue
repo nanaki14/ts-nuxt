@@ -27,12 +27,18 @@ export default Vue.extend({
   },
   computed: {
     count(): number {
-      return this.num
+      return this.$store.state.sample.count
     }
   },
   methods: {
     handleIncrement: function() {
-      this.num += 1
+      this.$store.dispatch('sample/increment')
+    }
+  },
+  mounted() {
+    if (window) {
+      // eslint-disable-next-line
+      console.log(this)
     }
   }
 })
