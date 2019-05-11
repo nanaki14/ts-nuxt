@@ -16,6 +16,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
+
 export default Vue.extend({
   components: {
     Logo
@@ -30,15 +31,15 @@ export default Vue.extend({
       return this.$store.state.sample.count
     }
   },
-  methods: {
-    handleIncrement: function() {
-      this.$store.dispatch('sample/increment')
-    }
-  },
   mounted() {
     if (window) {
       // eslint-disable-next-line
-      console.log(this)
+      console.log(this.$exStore.getters['sample/double'])
+    }
+  },
+  methods: {
+    handleIncrement: function() {
+      this.$store.dispatch('sample/increment')
     }
   }
 })
