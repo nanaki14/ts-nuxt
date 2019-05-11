@@ -28,7 +28,7 @@ export default Vue.extend({
   },
   computed: {
     count(): number {
-      return this.$store.state.sample.count
+      return this.$state.sample.count
     }
   },
   mounted() {
@@ -39,7 +39,7 @@ export default Vue.extend({
   },
   methods: {
     handleIncrement: function() {
-      this.$store.dispatch('sample/increment')
+      this.$dispatch('sample/asyncSetCount', { amount: this.count + 1 })
     }
   }
 })
