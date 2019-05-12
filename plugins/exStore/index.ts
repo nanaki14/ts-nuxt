@@ -28,11 +28,8 @@ class ExStore {
 }
 
 export default (context, inject) => {
-  // eslint-disable-next-line
-  console.log(context)
   const store = new ExStore(context.store)
-  // eslint-disable-next-line
-  console.log(store.getStore())
+
   inject('exStore', store.getStore())
   inject('state', store.state())
   inject('getters', store.getters())
