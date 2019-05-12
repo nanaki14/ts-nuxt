@@ -34,7 +34,7 @@ export default Vue.extend({
   mounted() {
     if (window) {
       // eslint-disable-next-line
-      console.log(this.$exStore.getters['sample/double'])
+      console.log(this.$getters['sample/double'])
     }
   },
   methods: {
