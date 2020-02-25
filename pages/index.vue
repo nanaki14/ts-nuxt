@@ -1,12 +1,12 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
+      <logo />
       <h1 class="title">ts-nuxt</h1>
       <h2 class="subtitle">My hunky-dory Nuxt.js project</h2>
-      <span @click="handleIncrement">{{count}}</span>
+      <span @click="handleIncrement">{{ count }}</span>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+        <a class="button--green" href="https://nuxtjs.org/" target="_blank">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
@@ -38,7 +38,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    handleIncrement: function() {
+    handleIncrement() {
       this.$dispatch('sample/asyncSetCount', { amount: this.count + 1 })
     }
   }
