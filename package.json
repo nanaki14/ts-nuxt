@@ -13,8 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "cross-env": "^7.0.0",
     "@nuxt/typescript-runtime": "^0.3.9",
+    "axios": "^0.19.2",
+    "cross-env": "^7.0.0",
     "nuxt": "^2.11.0",
     "ts-node": "^8.6.2"
   },

@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import * as Vuex from 'vuex'
+import { api } from '~/plugins/api'
+import { delay } from '~/plugins/delay'
+import environments from '~/utils/environments'
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -8,5 +11,8 @@ declare module 'vue/types/vue' {
     $getters: Vuex.ExStore['getters']
     $commit: Vuex.ExStore['commit']
     $dispatch: Vuex.ExStore['dispatch']
+    $delay: typeof delay
+    $api: typeof api
+    $env: typeof environments
   }
 }

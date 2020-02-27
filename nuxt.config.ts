@@ -33,6 +33,18 @@ module.exports = {
     {
       src: '~/plugins/exStore',
       ssr: true
+    },
+    {
+      src: '~/plugins/delay',
+      ssr: true
+    },
+    {
+      src: '~/plugins/env',
+      ssr: true
+    },
+    {
+      src: '~/plugins/api',
+      ssr: true
     }
   ],
 
