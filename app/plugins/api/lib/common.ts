@@ -5,7 +5,7 @@ import environments from '~/utils/environments'
 // REST
 
 const api = axios.create({
-  baseURL: environments.REACT_APP_API_BASE_URL
+  baseURL: environments.API_BASE_URL
 })
 
 export const get: <T>(
